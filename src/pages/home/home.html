@@ -1,14 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Gallery</ion-title>
   </ion-navbar>
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script> 
+  (swipeleft)="previmg()"-->
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+  <div (swiperight)="nextimg()">
+  <div (swipeleft)="previmg()">
+<img src="{{slide[ind].image}}" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
+</div>
+ </div>
+
+
+
 </ion-content>
+
