@@ -5,8 +5,8 @@ $ ionic cordova plugin add cordova-plugin-x-socialsharing
 $ npm install --save @ionic-native/social-sharing
 
 
---------PhotoLibrary------
+--------File transfer Plugin-----
 
-$ ionic cordova plugin add cordova-plugin-photo-library --variable PHOTO_LIBRARY_USAGE_DESCRIPTION="To choose photos"
+$ ionic cordova plugin add cordova-plugin-file-transfer
 
-$ npm install --save @ionic-native/photo-library
+$ npm install --save @ionic-native/file-transfer
