@@ -12,13 +12,14 @@
 </ion-header>
 
 <ion-content padding >
+
+  <button ion-button color="danger" (click)="openmodal()">OpenModal</button>
+
   <div (swiperight)="nextimg()">
-  <div (swipeleft)="previmg()">
-<img src="{{slide[ind].image}}" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
-</div>
- </div>
-
-
+    <div (swipeleft)="previmg()">
+      <img src="{{slide[ind].image}}" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
+    </div>
+  </div>
 
 </ion-content>
 

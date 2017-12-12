@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,ModalController } from 'ionic-angular';
+import {ModalPage} from '../modal/modal';
 
 @Component({
   selector: 'page-home',
@@ -7,14 +8,24 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-this.ind=0;
+ind: number;
 
+  constructor(public navCtrl: NavController, public modalController: ModalController) {
+    this.ind=0;
   }
 
-  slide = [{ image: "assets/imgs/fruit1.jpg",num:1 },{ image: "assets/imgs/fruit2.jpg",num:2 }, { image: "assets/imgs/fruit3.jpg",num:3 },  { image: "assets/imgs/fruit4.jpg",num:4 }]
+  openmodal(){
+    let modal = this.modalController.create(ModalPage);
+    modal.present();
+  }
 
-ind: number;
+
+
+
+
+
+//-------Code For Swipe-------------
+  slide = [{ image: "assets/imgs/fruit1.jpg",num:1 },{ image: "assets/imgs/fruit2.jpg",num:2 }, { image: "assets/imgs/fruit3.jpg",num:3 },  { image: "assets/imgs/fruit4.jpg",num:4 }]
 
 nextimg()
 {if(this.ind==3)
