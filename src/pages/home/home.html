@@ -15,11 +15,24 @@
 
   <button ion-button color="danger" (click)="openmodal()">OpenModal</button>
 
+  <!-- <ion-row>
+    <div class="each-image col-xs-6 col-sm-4 col-md-3 col-lg-2" *ngFor="let img of imageArray;let i = index;">
+    <div style="padding-bottom: 10px">
+      <div (swiperight)="nextimg()">
+        <div (swipeleft)="previmg()">
+          <img src="{{img.imageURL}}" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
+        </div>
+      </div>
+    </div>
+      </div>
+    </ion-row> -->
+    <div  *ngIf="imageArray">
   <div (swiperight)="nextimg()">
     <div (swipeleft)="previmg()">
-      <img src="{{slide[ind].image}}" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
+      <img [src]="imageArray[ind].imageURL" alt="The sliding item can be closed by grabbing a reference to ItemSliding. In the below example, the template reference variable slidingItem is placed on the element and passed to the share method.">
     </div>
   </div>
+</div>
 
 </ion-content>
 
