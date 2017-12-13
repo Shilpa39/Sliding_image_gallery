@@ -2,5 +2,14 @@
    <ion-icon name="share" class="share" (click)="share()"></ion-icon>
    <ion-icon name="md-download" class="download" (click)="saveimage()"></ion-icon>
    <ion-icon name="close" class="close" (click)="closemodal()"></ion-icon>
-   <div class="bg"></div>
+     <div (swiperight)="nextimg()" >
+    <div (swipeleft)="previmg()">
+<!--  <img src="{{slide[ind].image}}" alt="{{slide[ind].image}}"> or zoomable-->
+      <img class="bg" zooming="true" zoom="true" src="{{slide[ind].image}}" zoomable>
+
+   	</div>	
+   	</div>
+   
+    
+
 </body>

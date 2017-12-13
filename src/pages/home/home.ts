@@ -25,7 +25,7 @@ ind: number;
 
 
 //-------Code For Swipe-------------
-  slide = [{ image: "assets/imgs/fruit1.jpg",num:1 },{ image: "assets/imgs/fruit2.jpg",num:2 }, { image: "assets/imgs/fruit3.jpg",num:3 },  { image: "assets/imgs/fruit4.jpg",num:4 }]
+  slide = [{ image: "assets/imgs/img2.jpg",num:1 },{ image: "assets/imgs/logo.png",num:2 }, { image: "assets/imgs/logo.png",num:3 },  { image: "assets/imgs/img2.jpg",num:4 }]
 
 nextimg()
 {if(this.ind==3)

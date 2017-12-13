@@ -18,8 +18,30 @@ fileTransfer: FileTransferObject = this.transfer.create();
                 private socialSharing: SocialSharing,
                 private transfer: FileTransfer,
                 private file: File){
-
+this.ind=0;
     }
+
+     slide = [{ image: "assets/imgs/img2.jpg",num:1 },{ image: "assets/imgs/imgb.jpg",num:2 }, { image: "assets/imgs/imgc.jpg",num:3 },  { image: "assets/imgs/imgd.jpg",num:4 }]
+ind:number;
+nextimg()
+{if(this.ind==3)
+ {
+   this.ind=0;
+ }
+else
+ {
+this.ind = this.ind+1;
+ }}
+
+previmg()
+{if(this.ind==0)
+ {
+   this.ind=3;
+ }
+else
+ {
+this.ind = this.ind-1;
+ }}
 
     closemodal(){
         this.viewController.dismiss();
